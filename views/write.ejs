@@ -5,42 +5,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/public/main.css">
   <title>Document</title>
 </head>
 <body>
   
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">Todo App</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-          <a class="nav-link" href="#">Write</a>
-          <a class="nav-link" href="#">임시</a> 
-         
-        </div>
-      </div>
-    </div>
-  </nav>
+  <%- include('nav.html') %>
 
-  <h4 class="container mt-4"><strong>글 작성페이지</strong></h4>
+  <h4 class="container mt-4 text-center"><strong>일단 적어!</strong></h4>
 
   <div class="container mt-3">
     <form action="/add" method="POST"> 
       <div class="form-group">
-        <label>오늘의 할일</label>
+        <label>계획</label>
         <input type="text" class="form-control" name="title">
       </div>
       <div class="form-group">
-        <label>날짜</label>
+        <label>마감일</label>
         <input type="text" class="form-control" name="date">
       </div>
-      <button type="submit" class="btn btn-outline-secondary">Submit</button>
+      <button type="submit" class="btn btn-outline-secondary finish">완성</button>
     </form>
   </div>
+
+  
 
 
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
